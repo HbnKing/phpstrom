@@ -13,6 +13,14 @@ echo "<br>";
 echo $days;
 echo "<br>";
 echo $week;
+echo "<br>";
+echo date('Y-m-d H:i:s');   //现在的时间
+echo "<br>";
+echo date('Y-m-d H:i:s',strtotime('-1 day',time()));   //一天前的时间
+echo "<br>";
+echo date('Y-m-d H:i:s',strtotime('-1 week',time()));//一周前的时间
+echo "<br>";
+echo date('Y-m-d H:i:s',strtotime('-1 month',time()));//一月前的时间
 //所有内 容居中显示
 echo "<center>";
 echo "<h2> {$year}年{$month}月</h2>";
@@ -27,6 +35,8 @@ echo "<th>周四</th>";
 echo "<th>周五</th>";
 echo "<th>周六</th>";
 echo "</tr>";
+
+
 
 //绘制表格
 for($i = 1-$week;$i <= $days;){     //如果1号是星期三那么$=1-3=-2   排列后值为(-2)(-1)(0)(1)(2)(3)(4)
